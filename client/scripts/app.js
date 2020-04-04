@@ -40,7 +40,7 @@ var App = {
   },
 
 
-  cleanText: function(input){
+  cleanText: function(input) {
     let lt = /</g;
     let gt = />/g;
     let ap = /'/g;

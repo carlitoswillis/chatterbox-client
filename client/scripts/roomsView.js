@@ -19,7 +19,6 @@ var RoomsView = {
 
     // $('.chat').html('');
     // .append('<div>hello this is resetting stuff </div>');
-
     // $(`${Rooms.messageroomname}`).css('display', 'block');
 
   },

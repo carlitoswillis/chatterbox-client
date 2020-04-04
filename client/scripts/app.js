@@ -37,5 +37,16 @@ var App = {
   stopSpinner: function() {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
+  },
+
+
+  cleanText: function(input){
+    let lt = /</g;
+    let gt = />/g;
+    let ap = /'/g;
+    let ic = /"/g;
+    input  = input.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
+    return input;
   }
+
 };

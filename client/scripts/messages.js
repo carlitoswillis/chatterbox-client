@@ -34,15 +34,15 @@ var Messages = {
 
     $( document ).ready(App.fetch(function (data) {
       data = data.results;
-
       for (var message of data) {
         if (message.username !== undefined) {
           Messages.library.push(message);
-          // MessageView.render(message);
         }
       }
-
+      MessagesView.render();
     }));
+
+
 
   }
 

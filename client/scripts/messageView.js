@@ -1,18 +1,9 @@
 var MessageView = {
 
-  render: _.template(`
-      <!--
-      <div class="chat">
-        <div class="username"></div>
-        <div></div>
-      </div>
-      -->
-    `),
-
-  renderMessage: function () {
-
+  render: function (message) {
+    // console.log(message.username + ': ' + message.text);
+    $('body').append('<div class="chat"> </div>');
+    $('.chat').append(`<div class="username" id=${message.objectId}> ${message.username}</div>`);
+    $(`#${message.objectId}`).append(`<div class='message'> ${message.text}</div>`);
   }
-
-
-
 };

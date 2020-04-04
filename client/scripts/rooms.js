@@ -1,28 +1,30 @@
 var Rooms = {
 
-  prop: console.log('here', this.roomsArray),
-
-  roomsArray: [],
-
   initialize: function () {
 
-    // roomsArray = App.fetch(function (data) {
-    //   // var arr = [];
+    var roomSet = new Set();
 
-    //   // console.log(data);
+    $( document ).ready(App.fetch(function (data) {
+      data = data.results;
+      for (var element of data) {
+        roomSet.add(element.roomname);
+      }
+      for (var element of roomSet) {
+        RoomsView.$select.append($('<option/>', {
+          value: element,
+          text: element,
+          id: element
+        }));
+      }
 
-    //   // // for (var key in data) {
-    //   // //   console.log('key');
-    //   // // }
-    //   // return arr;
-    // });
+      RoomsView.$select.append($('<option/>', {
+        value: 'new room',
+        text: 'new room',
+        className: 'newRoom'
+      })).addClass('roomdropdown');
 
-    // console.log(allRooms);
-    //  = allRooms();
 
+    }));
   }
-
-
-
 
 };

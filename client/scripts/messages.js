@@ -16,8 +16,37 @@
 //   roomname: '4chan'
 // };
 
+// var message2 = {
+//   objectId: "WG171AqLq2",
+//   username: "anonymous",
+//   roomname: "room",
+//   text: ":)",
+//   createdAt: "2020-04-04T02:50:20.466Z",
+//   updatedAt: "2020-04-04T02:50:20.466Z"
+// };
+
 
 var Messages = {
+
+  library: [],
+
+  initialize: function () {
+
+    $( document ).ready(App.fetch(function (data) {
+      data = data.results;
+
+      for (var message of data) {
+        if (message.username !== undefined) {
+          Messages.library.push(message);
+          // MessageView.render(message);
+        }
+      }
+    }));
+
+    // console.log('here line 46',Messages.library);
+
+
+  }
 
 };
 

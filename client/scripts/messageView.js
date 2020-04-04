@@ -13,10 +13,10 @@ var MessageView = {
 
 
 
-    textToRender = App.cleanText(message.text)
+    messageText = App.cleanText(message.text);
+    userName = App.cleanText(message.username);
 
-
-      $('#chats').append(`<div class="username ${message.messageroomname}" "username=${message.username}> ${message.username} <div class='actualmessages'> ${textToRender} </div> </div>`);
+      $('#chats').append(`<div class="username ${message.messageroomname}" "username=${userName}> ${userName} <div class='actualmessages'> ${messageText} </div> </div>`);
 
 
   },

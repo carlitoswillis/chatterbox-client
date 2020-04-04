@@ -10,17 +10,18 @@ var RoomsView = {
     this.$select.addClass('roomdropdown');
 
     $( document ).ready(this.render);
+    this.$select.on()
   },
 
-  render: function() {
-    // $('.username').css('display', 'none');
+  render: function(room) {
+    $(`#chats`).childre().css('display', 'none');
 
     console.log('this does get activated');
 
     // $('.chat').html('');
     // .append('<div>hello this is resetting stuff </div>');
 
-    // $(`${Rooms.messageroomname}`).css('display', 'block');
+    $(`.${room}`).css('display', 'block');
 
   },
 

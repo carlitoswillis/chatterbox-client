@@ -41,6 +41,9 @@ var App = {
 
 
   cleanText: function(input){
+    if (input === undefined){
+      return input;
+    }
     let lt = /</g;
     let gt = />/g;
     let ap = /'/g;

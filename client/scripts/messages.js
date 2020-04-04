@@ -38,13 +38,11 @@ var Messages = {
       for (var message of data) {
         if (message.username !== undefined) {
           Messages.library.push(message);
-          // MessageView.render(message);
+          MessageView.render(message);
         }
       }
+
     }));
-
-    // console.log('here line 46',Messages.library);
-
 
   }
 

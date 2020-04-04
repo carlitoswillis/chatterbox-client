@@ -6,9 +6,11 @@ var Rooms = {
 
     $( document ).ready(App.fetch(function (data) {
       data = data.results;
+
       for (var element of data) {
         roomSet.add(element.roomname);
       }
+
       for (var element of roomSet) {
         RoomsView.$select.append($('<option/>', {
           value: element,
@@ -17,11 +19,11 @@ var Rooms = {
         }));
       }
 
-      RoomsView.$select.append($('<option/>', {
-        value: 'new room',
-        text: 'new room',
-        className: 'newRoom'
-      })).addClass('roomdropdown');
+      // RoomsView.$select.append($('<option/>', {
+      //   value: 'new room',
+      //   text: 'new room',
+      //   className: 'newRoom'
+      // })).addClass('roomdropdown');
 
 
     }));

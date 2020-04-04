@@ -10,9 +10,9 @@ var FormView = {
     // Stop the browser from submitting the form
     // messages.add(event);
     event.preventDefault();
+
+    // post messages instead of console logging...
     console.log($('#message').val());
-
-
 
   },
 

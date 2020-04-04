@@ -7,11 +7,11 @@ var App = {
   initialize: function() {
 
     App.username = window.location.search.substr(10);
-
     FormView.initialize();
     RoomsView.initialize();
     Messages.initialize();
     MessagesView.initialize();
+    MessageView.initialize();
     Rooms.initialize();
 
 

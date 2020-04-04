@@ -4,11 +4,14 @@ var MessagesView = {
 
   initialize: function() {
 
-    this.render();
+    // this.render();
 
   },
 
   render: function() {
+
+    // use ajax to wait for messages to download ? and save
+
     $( document ).ready(function () {
       console.log('line 10 msgs view ', Array.isArray(Messages.library));
       console.log('hola from line 12 msgs view ', Messages.library.length);

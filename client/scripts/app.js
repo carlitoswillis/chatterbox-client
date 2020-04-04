@@ -41,11 +41,14 @@ var App = {
 
 
   cleanText: function(input) {
+    if (input === undefined) {
+      return input;
+    }
     let lt = /</g;
     let gt = />/g;
     let ap = /'/g;
     let ic = /"/g;
-    input  = input.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
+    input = input.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
     return input;
   }
 

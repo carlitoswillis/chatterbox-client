@@ -42,8 +42,10 @@ var Messages = {
       MessagesView.render();
     }));
 
+  },
 
-
+  send: function (message) {
+    Parse.create(message);
   }
 
 };

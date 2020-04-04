@@ -1,4 +1,5 @@
 var Friends = {
+  friendsList: new Set (),
 
   initialize: function() {
 
@@ -16,14 +17,5 @@ var Friends = {
     });
 
   }
-
-  // var showUsrTweets = function(Usr){
-  //   $('#twtMn').children().css('display', 'none');
-  //   $('#twtMn').children('.' + Usr).css('display','block');
-  //   }
-  //   $(document).on('click', 'a.user', function () {
-  //     currentUsr = $(this).parent().attr('class')
-  //     showUsrTweets($(this).parent().attr('class'))
-  //  });
 
 };

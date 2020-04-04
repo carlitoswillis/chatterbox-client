@@ -12,7 +12,19 @@ var FormView = {
     event.preventDefault();
 
     // post messages instead of console logging...
-    console.log($('#message').val());
+    // console.log();
+
+
+    var username = App.username;
+    var messageText = $('#message').val();
+
+    Rooms.messageroomname = $('.roomdropdown option:selected').val();
+    var message = {
+      username: username,
+      text: messageText,
+      roomname: Rooms.messageroomname
+    };
+    Messages.send(message);
 
   },
 

@@ -35,7 +35,7 @@ var Messages = {
     $( document ).ready(App.fetch(function (data) {
       data = data.results;
       for (var message of data) {
-        if (message.username !== undefined) {
+        if (message.username !== undefined && message !== undefined) {
           Messages.library.push(message);
         }
       }

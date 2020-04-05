@@ -4,6 +4,11 @@ var Rooms = {
 
   initialize: function () {
 
+    RoomsView.$button.on('click', function () {
+
+      Rooms.add();
+    });
+
     var roomSet = new Set();
 
     $( document ).ready(App.fetch(function (data) {
@@ -26,6 +31,10 @@ var Rooms = {
       // this.messageroomname = $('.roomdropdown option:selected').val();
       RoomsView.$button.on('click', function () {
 
+        Rooms.add();
+
+
+
         RoomsView.$select.append($('<option/>', {
           value: $('.roomInput').val(),
           text: $('.roomInput').val()
@@ -34,9 +43,19 @@ var Rooms = {
         this.messageroomname = $('.roomInput').val();
         // option[value="SEL1"]
         RoomsView.$select.val(`${this.messageroomname}`);
+
       });
 
     }));
+
+  },
+
+
+
+  add: function () {
+
+    // var prompt = window.prompt;
+
   }
 
 };

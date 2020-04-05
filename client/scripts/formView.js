@@ -24,6 +24,7 @@ var FormView = {
       text: messageText,
       roomname: Rooms.messageroomname
     };
+
     Messages.send(message);
 
   },

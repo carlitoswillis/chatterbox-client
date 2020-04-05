@@ -14,10 +14,13 @@ var App = {
     MessageView.initialize();
     Rooms.initialize();
 
+    $(document).ready(function () {
+      Friends.initialize();
+    });
+
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
-
 
 
   },
@@ -41,15 +44,18 @@ var App = {
 
 
   cleanText: function(input) {
-    if (input === undefined) {
+    if ( typeof input === 'string') {
+      // let lt = /</g;
+      // let gt = />/g;
+      // let ap = /'/g;
+      // let ic = /"/g;
+      // input = input.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
+      return input;
+    } else {
+
+      console.log(here);
       return input;
     }
-    let lt = /</g;
-    let gt = />/g;
-    let ap = /'/g;
-    let ic = /"/g;
-    input = input.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
-    return input;
   }
 
 };
